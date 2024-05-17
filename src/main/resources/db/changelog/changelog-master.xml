@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+            http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+            http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+
+    <changeSet id="create_movie_table" author="ELavlinskaia">
+        <createTable tableName="movie" schemaName="movies">
+            <column name="movie_id" type="bigserial">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="movie_title" type="varchar(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="movie_year" type="int"/>
+        </createTable>
+    </changeSet>
+    
+</databaseChangeLog>
